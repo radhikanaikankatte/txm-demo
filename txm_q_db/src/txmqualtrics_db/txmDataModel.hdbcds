@@ -1,0 +1,9 @@
+context txmDataModel {
+
+    /*@@layout{"layoutInfo":{"x":-277,"y":-69.5}}*/
+    entity QRESPONSE {
+        key ID       : String(100);
+        key QUESTION : String(1000);
+            RESPONSE : String(1000);
+    };
+};

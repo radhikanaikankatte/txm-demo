@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="responses" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="responses"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="txmDataModel.QRESPONSE">
+    <resourceUri>txmDataModel.QRESPONSE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="QUESTION"/>
+      <viewAttribute id="RESPONSE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="txmDataModel.QRESPONSE"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="QUESTION" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QUESTION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="QUESTION"/>
+    </attribute></attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="RESPONSE" order="1" aggregationType="count" measureType="simple">
+      <descriptions defaultDescription="RESPONSE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="RESPONSE"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="183"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

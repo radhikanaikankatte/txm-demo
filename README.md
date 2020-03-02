@@ -1,2 +1,2 @@
-# txm-demo
-mta app for hana db
+# txm_demo
+TXM Demo MTA application with HAN DB module

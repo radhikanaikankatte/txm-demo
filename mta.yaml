@@ -1,0 +1,20 @@
+ID: txmdemo
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: txm_q_db
+   type: hdb
+   path: txm_q_db
+   requires:
+    - name: txm_q_hdi_db
+
+resources:
+ - name: txm_q_hdi_db
+   parameters:
+      config:
+         schema: TXM_Q_DB
+         database_id: ea30b186-0559-4f7e-a00b-796588dc97e8
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container

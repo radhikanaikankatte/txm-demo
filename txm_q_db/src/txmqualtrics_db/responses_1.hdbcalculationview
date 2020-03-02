@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="responses_1" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="responses_1"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="txmDataModel.QRESPONSE">
+    <resourceUri>txmDataModel.QRESPONSE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="txmDataModel.QRESPONSE">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="txmDataModel.QRESPONSE" columnName="ID"/>
+    </attribute>
+    <attribute id="QUESTION" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QUESTION"/>
+      <keyMapping columnObjectName="txmDataModel.QRESPONSE" columnName="QUESTION"/>
+    </attribute>
+    <attribute id="RESPONSE" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESPONSE"/>
+      <keyMapping columnObjectName="txmDataModel.QRESPONSE" columnName="RESPONSE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
